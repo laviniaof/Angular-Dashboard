@@ -6,6 +6,9 @@ import { Component, Input } from '@angular/core';
   imports: [],
   templateUrl: './dashboard-item.component.html',
   styleUrl: './dashboard-item.component.css',
+  host: {
+    class: 'dashboard-item'
+  }
 })
 export class DashboardItemComponent {
   /**O decorator também pode ser substituído pelo signal.
