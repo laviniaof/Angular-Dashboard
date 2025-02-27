@@ -1,4 +1,4 @@
-import { Component, input, ViewEncapsulation } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-control',
@@ -6,9 +6,11 @@ import { Component, input, ViewEncapsulation } from '@angular/core';
   imports: [],
   templateUrl: './control.component.html',
   styleUrl: './control.component.css',
-  encapsulation: ViewEncapsulation.None
+  host: {
+    class: 'control'
+  }
 })
 export class ControlComponent {
+  /**Instead of use @Input decorator, we are using signal */
   label = input.required<string>();
-
 }
